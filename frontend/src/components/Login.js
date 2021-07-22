@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Login(props) {
   const [userData, setUserData] = useState({
@@ -44,6 +45,9 @@ function Login(props) {
         />
       </fieldset>
       <button className="form__button" type="submit">Войти</button>
+      <p className="form__question">Первый раз здесь?&nbsp;
+        <Link to="/sign-up" className="form__link">Зарегистрироваться</Link>
+      </p>
     </form>
   );
 }
